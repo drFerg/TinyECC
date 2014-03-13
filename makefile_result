@@ -1,0 +1,22 @@
+MIG = mig java
+
+test_msg.java:
+	$(MIG) -java-classname=test_msg ./result.h test_msg -o $@
+
+public_key_msg.java:
+	$(MIG) -java-classname=public_key_msg ./result.h public_key_msg -o $@
+
+private_key_msg.java:
+	$(MIG) -java-classname=private_key_msg ./result.h private_key_msg -o $@
+
+time_msg.java:
+	$(MIG) -java-classname=time_msg ./result.h time_msg -o $@
+
+packet_msg.java:
+	$(MIG) -java-classname=packet_msg ./result.h packet_msg -o $@
+
+ecdh_key_msg.java:
+	$(MIG) -java-classname=ecdh_key_msg ./result.h ecdh_key_msg -o $@
+
+uint8_msg.java:
+	$(MIG) -java-classname=uint8_msg ./result.h uint8_msg -o $@

@@ -286,8 +286,10 @@ implementation {
     if (!s) return 0;
     param = &s->p;
     memcpy(&Bbuf, &(s->b), sizeof(Barrett));
+    #ifdef SHAMIR_TRICK
     memcpy(&s_mask, s->mask, NUM_MASKS);
     memcpy(&pqBaseArray, s->pBaseArray, sizeof(Point) * NUM_POINTS);
+    #endif
     return 1;
   }
 
@@ -295,8 +297,10 @@ implementation {
     if (!s) return 0;
     memcpy(&(s->p), param, sizeof(Params));
     memcpy(&(s->b), &Bbuf, sizeof(Barrett));
+    #ifdef SHAMIR_TRICK
     memcpy(s->mask, &s_mask, NUM_MASKS);
     memcpy(s->pBaseArray, &pqBaseArray, sizeof(Point) * NUM_POINTS);
+    #endif
     return 1;
   }
 

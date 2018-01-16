@@ -20,7 +20,7 @@ Update
 ------
 
 Added the ability to save the state of ECC and ECDSA when changing between keys, thus saving the initilisation times when repeatedly switching.
-Also modified some return values and will add some documentation to describe them in more detail.
+Also modified some return values, see commits
 
 How to install
 --------------

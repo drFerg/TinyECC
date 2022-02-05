@@ -3758,7 +3758,7 @@ static unsigned int  NN_DigitBits (NN_DIGIT a);
     memset(q0, 0, NUMWORDS*NN_DIGIT_LEN);
     q0[0] = 1;
     memset(q1, 0, NUMWORDS*NN_DIGIT_LEN);
-    q1[1] = 1;
+    q1[0] = 1;
 
     r = NN_Bits(k, NUMWORDS) - 1;
 
@@ -3781,6 +3781,7 @@ static unsigned int  NN_DigitBits (NN_DIGIT a);
 	call NN.ModSub(v0, v0, q0, p, NUMWORDS);
 	call NN.ModSub(v0, v0, q0, p, NUMWORDS);
       }
+      r--;
     }
     memcpy(V0, v0, NUMWORDS*NN_DIGIT_LEN);
     memcpy(Q0, q0, NUMWORDS*NN_DIGIT_LEN);
